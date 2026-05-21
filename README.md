@@ -25,6 +25,7 @@ This repository contains a submission to the [Wildfire Risk Modeling Exercise](h
 
 ## Data Preparation
 **`preproc/data_preparation_forest.ipynb`** and **`preproc/data_preparation_prairie.ipynb`**
+
 - Read ignition information
 - Compare synthetic weather data to the real Synoptic weather station for the same date-time period
 - Visualize weather data
@@ -41,6 +42,7 @@ This repository contains a submission to the [Wildfire Risk Modeling Exercise](h
 
 ## [WRFxPy Forecasting System](https://github.com/openwfm/wrfxpy)
 **`github.com/openwfm/wrfxpy`**
+
 The WRFxPy system is a Python framework to automate WRF-SFIRE simulations from a job JSON file. Using information from the previous section, two job JSON files (wrfxpy_inputs/forest.json and wrfxpy_inputs/prairie.json) were created. The file specifies all information related to the start and end of the simulation, weather forcing, domain configuration, ignition information, post-processing variables, and cluster specifications, such as the number of nodes and the number of processors per node. A first simulation using the default system (SIM_DEFAULT) was created. This first simulation uses the following LANDFIRE data already processed in the system:
 - Fire behavior fuel models (FBFM) SB40 considering urban unburnable
 - Elevation
@@ -60,6 +62,7 @@ Finally, to represent uncertainty in the initial and boundary conditions control
 
 ## [WRF-SFIRE Coupled Atmosphere-Fire Model](https://github.com/openwfm/WRF-SFIRE)
 **`github.com/openwfm/WRF-SFIRE`**
+
 The WRF-SFIRE model utilized for this exercise is the public version but incorporating some key elements required for accomplish the exercise:
 - Crown fire using ...
 - Urban fuel classes using WUDAPT for urban fuel load
@@ -69,12 +72,16 @@ The WRF-SFIRE model utilized for this exercise is the public version but incorpo
 
 
 # Final Model Outputs
-**`outputs/model`** directory
+**`outputs/model`**
+
 Outputs from each model are post-processed to include only FXLONG, FXLAT, NFUEL_CAT, and FIRE_AREA.
 The following cases are provided:
 - Deterministic coupled atmosphere-fire simulation using LANDFIRE data only (SIM_DEFAULT)
 - Deterministic coupled atmosphere-fire simulation using most of the data provided for the exercise (SIM_CONTROL)
 - Ensemble forecast of a coupled atmosphere-fire simulation (SIM_ENSEMBLE)
-**`outputs/layers`** directory
+
+
+**`outputs/layers`**
+
 - Hourly fire progression isochrones for each simulation (including ensemble members)
 - Fire probability map based on the 10 ensemble members
