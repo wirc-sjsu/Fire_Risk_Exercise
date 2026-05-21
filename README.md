@@ -1,5 +1,5 @@
 # Wildfire Risk Modeling Exercise
-This repository contains a submission to the [Wildfire Risk Modeling Exercise](https://www.wildfirecommons.org/educationhub/datachallenge/learner/4da8e5b0-6d81-4aa9-9482-309194cfb975) by the [Wildfire Interdisciplinary Research Center](https://www.wildfirecenter.org/) (WIRC) at San José State University (SJSU). The submission uses WRF-SFIRE ensemble wildfire simulations to estimate fire probability and derive additional diagnostics from the three-dimensional CFD model.
+This repository contains a submission to the [Wildfire Risk Modeling Exercise](https://www.wildfirecommons.org/educationhub/datachallenge/learner/4da8e5b0-6d81-4aa9-9482-309194cfb975) by the [Wildfire Interdisciplinary Research Center](https://www.wildfirecenter.org/) (WIRC) at San José State University (SJSU). The submission uses WRF-SFIRE ensemble wildfire simulations to estimate fire probability and derive additional diagnostics from the coupled atmosphere-fire model.
 
 
 ## Prerequisites
