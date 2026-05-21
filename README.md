@@ -24,7 +24,7 @@ This repository contains a submission to the [Wildfire Risk Modeling Exercise](h
 
 
 ## Data Preparation
-**`data_preparation_forest.ipynb`** and **`data_preparation_prairie.ipynb`**
+**`preproc/data_preparation_forest.ipynb`** and **`preproc/data_preparation_prairie.ipynb`**
 - Read ignition information
 - Compare synthetic weather data to the real Synoptic weather station for the same date-time period
 - Visualize weather data
@@ -40,7 +40,7 @@ This repository contains a submission to the [Wildfire Risk Modeling Exercise](h
 
 
 ## WRFxPy Forecasting System
-**`github.com/openwfm/wrfxpy`**
+**`[github.com/openwfm/wrfxpy](https://github.com/openwfm/wrfxpy)`**
 The WRFxPy system is a Python framework to automate WRF-SFIRE simulations from a job JSON file. Using information from the previous section, two job JSON files (wrfxpy_inputs/forest.json and wrfxpy_inputs/prairie.json) were created. The file specifies all information related to the start and end of the simulation, weather forcing, domain configuration, ignition information, post-processing variables, and cluster specifications, such as the number of nodes and the number of processors per node. A first simulation using the default system (SIM_DEFAULT) was created. This first simulation uses the following LANDFIRE data already processed in the system:
 - Fire behavior fuel models (FBFM) SB40 considering urban unburnable
 - Elevation
@@ -59,7 +59,7 @@ Finally, to represent uncertainty in the initial and boundary conditions control
 
 
 ## WRF-SFIRE WUI Fire Spread Simulation
-**`github.com/openwfm/WRF-SFIRE`**
+**`[github.com/openwfm/WRF-SFIRE](https://github.com/openwfm/WRF-SFIRE)`**
 The WRF-SFIRE model utilized for this exercise is the public version but incorporating some key elements required for accomplish the exercise:
 - Crown fire using ...
 - Urban fuel classes using WUDAPT for urban fuel load
