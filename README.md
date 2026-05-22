@@ -87,3 +87,8 @@ The following cases are provided:
 
 - Hourly fire progression isochrones for each simulation (including ensemble members)
 - Fire probability map based on the 10 ensemble members
+
+**ESRI WebMaps**
+
+- [Town of Forests](https://ulri.maps.arcgis.com/home/item.html?id=a3c12ec224b4461387fb8277032b6daf)
+- [Town of Prairie](https://ulri.maps.arcgis.com/home/item.html?id=1455c12d1f5e4a3aa727dd17db8a7992) 
