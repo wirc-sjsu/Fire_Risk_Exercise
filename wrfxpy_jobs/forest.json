@@ -1,0 +1,105 @@
+{
+  "grid_code": "forest-control",
+  "iofields": true,
+  "grib_source": "HRRR",
+  "use_wgrib2": true,
+  "wps_namelist_path": "etc/nlists/default.wps",
+  "wrf_namelist_path": "etc/nlists/default.input",
+  "fire_namelist_path": "etc/nlists/default.fire",
+  "emissions_namelist_path": "etc/nlists/default.fire_emissions",
+  "num_nodes": 1,
+  "ppn": 42,
+  "nproc": [7, 6],
+  "wall_time_hrs": 24,
+  "start_utc": "2024-10-27_16:00:00",
+  "end_utc": "2024-10-28_04:50:00",
+  "domains" : {
+    "1" : { 
+      "cell_size" : [1000, 1000],
+      "domain_size" : [61, 49],
+      "center_latlon" : [38.91818, -120.02234226],
+      "truelats" : [38.91818, 38.91818],
+      "stand_lon" : -120.02234226,
+      "time_step" : 6,
+      "history_interval" : 60,
+      "geog_res" : "30s",
+      "subgrid_ratio" : [0, 0]
+    },
+    "2" : {
+      "parent_id" : 1,
+      "parent_cell_size_ratio" : 3,
+      "parent_time_step_ratio" : 3,
+      "geog_res" : ".3s",
+      "subgrid_ratio" : [0, 0],
+      "parent_start" : [21, 17],
+      "parent_end" : [40, 32],
+      "history_interval" : 30
+    },
+    "3" : {
+      "parent_id" : 2,
+      "parent_cell_size_ratio" : 3,
+      "parent_time_step_ratio" : 3,
+      "geog_res" : ".3s",
+      "subgrid_ratio" : [50, 50],
+      "parent_start" : [21, 17],
+      "parent_end" : [40, 32],
+      "history_interval" : 15
+    }
+  },
+  "ignitions" : {
+    "3" : [ {
+      "time_utc": "2024-10-27T17:00:00",
+      "duration_s" : 240,
+      "latlon" : [38.9014, -120.0306]
+    } ]
+  },
+  "postproc" : {
+    "1": [
+      "T2_F",
+      "PSFC",
+      "WINDSPD_mph",
+      "WINDVEC",
+      "WINDVEC_mph_D",
+      "PM25_SFC_D",
+      "SMOKE1000FT_AGL_D",
+      "SMOKE4000FT_AGL_D",
+      "SMOKE6000FT_AGL_D",
+      "VR_SFC",
+      "VR1000FT_AGL",
+      "VR4000FT_AGL",
+      "VR6000FT_AGL",
+      "PLUME_HEIGHT_ft",
+      "VR_SFC"
+    ],
+    "3": [
+      "T2_F",
+      "PSFC",
+      "WINDSPD_mph",
+      "WINDVEC",
+      "WINDVEC_mph_D",
+      "RH_FIRE",
+      "ZSF",
+      "NFUEL_CAT",
+      "1HR_FM",
+      "10HR_FM",
+      "100HR_FM",
+      "PM25_SFC_D",
+      "PLUME_HEIGHT_ft",
+      "SMOKE1000FT_AGL_D",
+      "SMOKE4000FT_AGL_D",
+      "SMOKE6000FT_AGL_D",
+      "VR_SFC",
+      "VR1000FT_AGL",
+      "VR4000FT_AGL",
+      "VR6000FT_AGL",
+      "HDW",
+      "FOSBERG",
+      "FIRE_AREA",
+      "FGRNHFX",
+      "FLINEINT_btupftps",
+      "ROS_chsph"
+    ],
+    "shuttle" : "incremental",
+    "description" : "Town of Forest Control"
+  }
+}

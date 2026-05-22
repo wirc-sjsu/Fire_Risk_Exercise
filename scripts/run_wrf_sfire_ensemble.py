@@ -28,7 +28,6 @@ SLURM_TEMPLATE = """#!/bin/bash
 #SBATCH --job-name=WRF-SFIRE
 #SBATCH --time=24:00:00
 #SBATCH --nodes=1
-#SBATCH --nodelist=ember-gg[03-07]
 #SBATCH --ntasks={total_ntasks}
 
 # load appropriate modules
