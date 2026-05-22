@@ -72,7 +72,7 @@ The WRF-SFIRE model utilized for this exercise is the public version but it inco
 
 
 # Final Model Outputs
-**`outputs/model`**
+**`data/output/model`**
 
 Outputs from each model are post-processed to include only FXLONG, FXLAT, NFUEL_CAT, and FIRE_AREA.
 The following cases are provided:
@@ -81,7 +81,7 @@ The following cases are provided:
 - Ensemble forecast of a coupled atmosphere-fire simulation (SIM_ENSEMBLE)
 
 
-**`outputs/layers`**
+**`data/output/agol`**
 
 - Hourly fire progression isochrones for each simulation (including ensemble members)
 - Fire probability map based on the 10 ensemble members
