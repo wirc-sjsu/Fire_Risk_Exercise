@@ -46,10 +46,24 @@ python run_wrf_ensemble.py \
 #------------------------------
 # Run postprocessing pipeline
 #------------------------------
+# Postproc SIM-BASELINE
+python postproc_sims.py \
+	--ensemble-dir ../wrfxpy/wksp/wfc-forest-control-2024-10-27_16:00:00-13_base \
+	--output ../data/output/model/Forest_SIM_BASELINE.nc --member-glob "wrf" \
+	--wrfout-glob "wrfout_d03*" --vars FXLONG FXLAT NFUEL_CAT FIRE_AREA \
+	--static-vars FXLONG FXLAT NFUEL_CAT
+# Postproc SIM-CONTROL
+python postproc_sims.py \
+	--ensemble-dir ../wrfxpy/wksp/wfc-forest-control-2024-10-27_16:00:00-13 \
+	--output ../data/output/model/Forest_SIM_CONTROL.nc --member-glob "wrf" \
+	--wrfout-glob "wrfout_d03*" --vars FXLONG FXLAT NFUEL_CAT FIRE_AREA \
+	--static-vars FXLONG FXLAT NFUEL_CAT
+# Postporc SIM-ENSEMBLE
 python postproc_sims.py \
 	--ensemble-dir ../wrfxpy/wksp/wfc-forest-control-2024-10-27_16:00:00-13/wrf_ens \
 	--output ../data/output/model/Forest_SIM_ENSEMBLE.nc --wrfout-glob "wrfout_d03*" \
 	--vars FXLONG FXLAT NFUEL_CAT FIRE_AREA --static-vars FXLONG FXLAT NFUEL_CAT
+# Create AGOL final products
 python postproc_agol.py --input ../data/output/model/Forest_SIM_ENSEMBLE.nc \
 	--output-dir ../data/output/agol/Forest --threshold 0 --probability-mode any_time \
 	--progression-mode cumulative --progression-prob-threshold 0.5 --min-area-ha 0.1 --write-shapefiles
