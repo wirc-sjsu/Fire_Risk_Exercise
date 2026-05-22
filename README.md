@@ -88,7 +88,8 @@ The following cases are provided:
 - Hourly fire progression isochrones for each simulation (including ensemble members)
 - Fire probability map based on the 10 ensemble members
 
-**ESRI WebMaps**
+# Final Model Outputs
+Fire probability maps and fire progression were post-processed into ESRI Features and visualized in ESRI WebMaps. The fire probability is the fraction of ensemble members that burned at each location, ranging from 0 to 100 %. The fire progression is the predicted fire spread timing, expressed by hour, and is defined as the area covered by 50% of the ensemble members.
 
 - [Town of Forests](https://ulri.maps.arcgis.com/home/item.html?id=a3c12ec224b4461387fb8277032b6daf)
 - [Town of Prairie](https://ulri.maps.arcgis.com/home/item.html?id=1455c12d1f5e4a3aa727dd17db8a7992) 
